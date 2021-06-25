@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int main(){
     float r1,r2,r3;
     float tongnt,tongss,tong;
@@ -9,7 +10,7 @@ int main(){
     printf("\nNhap dien tro thu ba la: ");
     scanf("%f",&r3);
     tongnt=r1+r2+r3;
-    tongss=(1/r1)+(1/r2)+(1/r3);
+    tongss=(r1*r2*r3)/(r1*r2+r2*r3+r1*r3);
     tong=tongss+tongnt;
     printf("Tong la: %.2f",tong);
     return 0;
