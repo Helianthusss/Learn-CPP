@@ -3,8 +3,12 @@
  
 int main(){
     int n;
+    do{
     printf("\nNhap n = ");
     scanf("%d", &n);
+    if(n<=0)
+        printf("\nNhap so khong hop le!!!");  
+    }while (n<=0);
     if(n < 2){
         printf("\n%d khong phai so nguyen to", n);
         return 0;
