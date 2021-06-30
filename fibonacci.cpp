@@ -6,9 +6,10 @@ using namespace std;
 int fibonacci(int n);
 int main(int argc, char** argv) {
 	int n;
-//	cout<<"\nNhap so luong phan tu cua day:"<<n;
+    cout<<"\nNhap so luong phan tu cua day:";
+    cin>>n;
 	cout<<"\nDay fibonacci la:";
-	for(int i=0;i<10;i++){
+	for(int i=0;i<n;i++){
 		cout<<fibonacci(i)<<" ";
 	}
 	return 0;
@@ -30,4 +31,7 @@ int fibonacci(int n){
 		}
 	}
 	return fn;   	
+}
+int timkiem(int n){
+	
 }
