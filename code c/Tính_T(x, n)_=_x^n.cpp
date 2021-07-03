@@ -1,3 +1,4 @@
+// tính x^n
 #include<stdio.h>
 #include<conio.h>
 double Power_n(double x, long n){

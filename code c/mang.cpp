@@ -23,7 +23,7 @@ int main()
 	scanf("%d",&n);
 	if(n<=0||n>=50)
 	   printf("\nNhap lai!");
-   }while(n<=0||n>=50);
+    }while(n<=0||n>=50);
     a=(int*)malloc(n*sizeof(int));
     nhap(a,n);
     printf("\n mang vua nhap la :");

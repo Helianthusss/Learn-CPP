@@ -1,3 +1,4 @@
+//kiểm tra số đối xứng
 #include <stdio.h>
 #include <string.h>
 bool IsNumber(char s[], int n){

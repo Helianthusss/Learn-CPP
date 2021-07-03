@@ -1,4 +1,6 @@
+// tính tổng
 #include<stdio.h>
+
 int main(){
     int n,S=0;
 	printf("\nNhap n: ");
@@ -9,4 +11,3 @@ int main(){
     printf("\nTong 1 + 2 + ... + %d la %ld: ", n, S);
 	return 0;
 }
-//hello

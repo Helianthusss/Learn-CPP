@@ -1,3 +1,4 @@
+// kiểm tra số hoàn hảo
 #include<stdio.h>
 bool check(int n){
     int sum = 0;//khai bao biem sum

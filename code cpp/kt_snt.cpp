@@ -5,6 +5,7 @@
 using namespace std;
 
 int isPrimeNumber(int n);
+
 int main(int argc, char** argv) {
 	int n;
 	cout << "\nNhap n: ";

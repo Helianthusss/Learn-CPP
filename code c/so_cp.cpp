@@ -1,3 +1,4 @@
+// kiểm tra số chính phương
 #include <stdio.h>
  
 int main(){
