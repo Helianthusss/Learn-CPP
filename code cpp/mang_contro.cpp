@@ -24,12 +24,12 @@ int main(){
 }
 void NhapMang(int *a, int n){
 	for(int i=0; i<n; i++){
-			cout<<"\nPhan tu thu"<< i <<"la: ";
+			cout<<"\nPhan tu thu"<< i+1 <<"la: ";
 			cin>>*(a+i);
 		}
 }
 void XuatMang(int *a, int n){
 	for(int i=0;i<n;i++){
-			cout<<"\nPhan tu thu"<< i <<"la: "<<*(a+i);
+			cout<<"\nPhan tu thu"<< i+1 <<"la: "<<*(a+i);
 		}
 }
