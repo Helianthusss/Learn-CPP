@@ -17,8 +17,8 @@ int main(){
 	int n1=8;
 	bool kq=isEven(n1);
 	if (kq==true)
-	    cout<< n1<<"la so chan";
+	    cout<<n1 <<"la so chan";
 	else 
-	    cout<<n1<<"la so le";
+	    cout<<n1 <<"la so le";
 	return 0;
 }
