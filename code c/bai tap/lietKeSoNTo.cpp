@@ -55,10 +55,6 @@ bool IsPrime(int n)
     }
     return true;
 }
- 
-/*
-    Đếm số lượng số nguyên tố
-*/
 int PrimeCount(int a[], int n)
 {
     int count = 0;

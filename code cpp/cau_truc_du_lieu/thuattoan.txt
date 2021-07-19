@@ -1,0 +1,9 @@
+- thuật toán duyệt
+- thuật toán Sinh
+- thuật toán đệ qui
+- thuật toán quay lui 
+- thuật toán tham lam,vét cạn
+- thuật toán chia để trị
+- thuật toán qyu hoạch động
+- thuật toán tìm kiếm mẫu, sắp xếp
+- thuật toán nhánh cận

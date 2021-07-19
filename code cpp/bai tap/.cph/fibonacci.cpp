@@ -32,6 +32,4 @@ int fibonacci(int n){
 	}
 	return fn;   	
 }
-int timkiem(int n){
-	
-}
+
