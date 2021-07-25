@@ -1,0 +1,7 @@
+Hàng đợi là một đối tượng (cấu trúc dữ liệu trừu tượng - ADT) cho phép các hoạt động sau:
+
+Enqueue : Thêm một phần tử vào cuối hàng đợi
+Dequeue : Xóa một phần tử khỏi hàng đợi
+IsEmpty : Kiểm tra xem hàng đợi có trống không
+IsFull : Kiểm tra xem hàng đợi đã đầy chưa
+Peek : Nhận giá trị phía trước của hàng đợi mà không cần loại bỏ nó
