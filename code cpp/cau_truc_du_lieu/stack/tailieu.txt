@@ -2,6 +2,7 @@ Có một số hoạt động cơ bản cho phép chúng tôi thực hiện các
 
 push : Thêm một phần tử vào đầu ngăn xếp
 Pop : Xóa một phần tử khỏi đầu ngăn xếp
-IsEmpty : Kiểm tra xem ngăn xếp có trống không
-IsFull : Kiểm tra xem ngăn xếp đã đầy chưa
+Empty : Kiểm tra xem ngăn xếp có trống không
+Full : Kiểm tra xem ngăn xếp đã đầy chưa
 Peek : Nhận giá trị của phần tử trên cùng mà không cần xóa nó
+top : truy cập tới phần tử ở đỉnh stack. ĐPT O(1)

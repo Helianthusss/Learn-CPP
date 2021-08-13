@@ -21,7 +21,7 @@ void helper(int n, int s) {
     else
         for (int i = 0; i < 6; i++) {
             int t = s * 10 + a[i];
-            if (isPrimeNumber(t)) // kiem tra t co phai la nguyen to k
+            if (isPrimeNumber(t))
                 helper(n, t);
         }
 }
