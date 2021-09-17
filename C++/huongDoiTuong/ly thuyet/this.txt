@@ -1,0 +1,2 @@
+this dùng để trọ đến đối tượng
+this trả về object hiện tại
