@@ -23,7 +23,6 @@ Node *CreateNode( int d){
 		cout<<"Cap phat bo nho that bai";
 	}
 	return pNode;
-	
 }
 // in ra danh sach lien ket
 void PrintList(singleList list){

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style type="text/css">
+      fieldset {
+        background-color: rgb(188, 188, 196);
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Contact details</legend>
+      <h2>Information declaration form</h2>
+      <form action="http://www.example.com/login.php">
+        <p>
+          First and last name:
+          <input type="text" name="username" size="15" maxlength="30" />
+        </p>
+        <label>Age: <input type="text" name="age" size="3" /></label>
+        <br/ > Gender:
+        <input id="female" type="radio" name="gender" value="f" />
+        <label for="female">Female</label>
+        <input id="male" type="radio" name="gender" value="m" />
+        <label for="male">Male</label>
+        <p>
+          Address:
+          <input type="address" name="address" size="30" maxlength="40" />
+        </p>
+      </form>
+      <form action="http://www.example.com/profile.php">
+        <p>
+          What kind of music do you like?:
+          <br />
+          <input type="radio" name="genre" value="rock" checked="checked" />
+          Rock
+          <input type="radio" name="genre" value="pop" />
+          Pop
+          <input type="radio" name="genre" value="jazz" />
+          Jazz
+        </p>
+      </form>
+      <a id="link" href="thanhcong.html">
+        <input type="submit" value="Submit" style="text-align: right"
+      /></a>
+    </fieldset>
+  </body>
+</html>
