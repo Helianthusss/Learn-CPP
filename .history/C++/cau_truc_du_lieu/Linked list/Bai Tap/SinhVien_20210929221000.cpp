@@ -270,28 +270,6 @@ void Slist::traverse(){
 	}
 	delete p;
 }
-void Slist::deleteDuplicate(){
-    Node* meo = head;
-    Node* del;
-    while(meo!=NULL){
-        Node* pre = meo;
-        Node* cur = meo->next;
-        while(pre!=NULL && cur!=NULL){
-            if(meo->data.name == cur->data.name){
-                del = cur;
-                cur=cur->next;
-                pre->next=cur;
-                delete del;
-                size--;
-            }else{
-                pre = pre->next;
-                cur=cur->next;
-            }
-        }
-        meo =meo->next;
-        if(meo== tail) break;
-    }
-}
 int main(){
 	Slist slist;
 	int n;

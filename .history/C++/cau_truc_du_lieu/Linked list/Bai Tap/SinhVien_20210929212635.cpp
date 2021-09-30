@@ -161,44 +161,30 @@ void Slist::majorStatistics(){
         if(c[i+1].major!=c[i].major){
             cout<<"Major "<<c[i].major<<" has "<<count<<" students"<<endl;
             count = 0;
-            if(i<size-1){
+            if(a != tail){
                 cout<<"--->Major "<<c[i+1].major<<endl;
             }
         }
     }
 }
 void Slist::classStatistics(){
+    int count = 0;
     Node *a = head;
-    Student c[size];
-    int i = 0, count = 0;
-    while(a != NULL){
-        c[i]=a->data;
-        i++;
-        a = a->next;
-    }
-    for(int i=0; i<size-1;i++){
-        for(int j=i+1; j<size;j++){
-            if(c[i].Class>c[j].Class){
-                swap(c[i],c[j]);
-            }
-        }
-    }
-    cout<<"--->Class "<<c[0].Class<<endl;
-    for(int i = 0; i<size; i++){
-        cout<<"name: "<<c[i].name<<endl;
-        cout<<"ID: "<<c[i].ID<<endl;
-        cout<<"date of birth: "<<c[i].date<<endl;
-        cout<<"GPA: "<<c[i].GPA<<endl; 
-        cout<<"Class: "<<c[i].Class<<endl;
-        cout<<"Major: "<<c[i].major<<endl;
+    cout<<"--->Class "<<a->data.Class<<endl;
+    while(a!=NULL){
+        print(a);
         count++;
-        if(c[i+1].Class!=c[i].Class){
-            cout<<"Class "<<c[i].Class<<" has "<<count<<" students"<<endl;
+        if(a == tail){
+            cout<<"Class "<<a->data.Class<<" has "<<count<<" students"<<endl;
+        }
+        else if((a->next->data.Class!=a->data.Class)){
+            cout<<"Class "<<a->data.Class<<" has "<<count<<" students"<<endl;
             count = 0;
-            if(i<size-1){
-                cout<<"--->Class "<<c[i+1].Class<<endl;
+            if(a != tail){
+                cout<<"--->Class "<<a->next->data.Class<<endl;
             }
         }
+        a = a->next;
     }
 }
 void Slist::findhighestGPA(){
@@ -226,31 +212,22 @@ void Slist::findlowestGPA(){
     print(a);
 }
 void Slist::countMajor(){
+    int count = 0;
     Node *a = head;
-    Student c[size];
-    int i = 0, count = 0;
-    while(a != NULL){
-        c[i]=a->data;
-        i++;
-        a = a->next;
-    }
-    for(int i=0; i<size-1;i++){
-        for(int j=i+1; j<size;j++){
-            if(c[i].major>c[j].major){
-                swap(c[i],c[j]);
-            }
-        }
-    }
-    cout<<"<--->Major "<<c[0].major;
-    for(int i = 0; i<size; i++){
+    cout<<"<--->Major "<<a->data.major;
+    while(a!=NULL){
         count++;
-        if(c[i+1].major!=c[i].major){
+        if(a == tail){
+            cout<<" has "<<count<<" students"<<endl;
+        }
+        else if((a->next->data.Class!=a->data.Class)){
             cout<<" has "<<count<<" students"<<endl;
             count = 0;
-            if(i<size-1){
-                cout<<"<--->Major "<<c[i+1].major;
+            if(a != tail){
+                cout<<"<--->Major "<<a->next->data.major;
             }
         }
+        a = a->next;
     }
 }
 void Slist::print(Node *s){
@@ -269,28 +246,6 @@ void Slist::traverse(){
 		p=p->next;
 	}
 	delete p;
-}
-void Slist::deleteDuplicate(){
-    Node* meo = head;
-    Node* del;
-    while(meo!=NULL){
-        Node* pre = meo;
-        Node* cur = meo->next;
-        while(pre!=NULL && cur!=NULL){
-            if(meo->data.name == cur->data.name){
-                del = cur;
-                cur=cur->next;
-                pre->next=cur;
-                delete del;
-                size--;
-            }else{
-                pre = pre->next;
-                cur=cur->next;
-            }
-        }
-        meo =meo->next;
-        if(meo== tail) break;
-    }
 }
 int main(){
 	Slist slist;
