@@ -78,7 +78,7 @@ void sapXepTangDanNamSinh(SinhVien sv[], int n){
 int SinhVien::getDtb(){
     return Dtb;
 }
-void nhapDanhSach(SinhVien sv[], int n){
+void nhapDanhSach(SinhVien &sv[], int &n){
     cout<<"\nNhap so luong sinh vien: ";
     cin>>n ;
     cout<<"\nNhap danh sach sinh vien!!"<<endl;
@@ -117,6 +117,5 @@ int main(){
     thongKe(sv,n);
     return 0;  
 }
-
 
 

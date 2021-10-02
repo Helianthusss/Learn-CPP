@@ -9,7 +9,7 @@ class SinhVien{
         int msv;
         string name;
         int year;
-        char Class[5];
+        string Class;
         int  Dtb;
     public:
         friend istream& operator >>(istream &is, SinhVien &sv);
@@ -23,7 +23,7 @@ istream& operator >> (istream &is, SinhVien &sv){
     is >> sv.msv;
     cin.ignore();
     cout<<"\nNhap ten sinh vien: ";
-    getline(is,sv.name);
+    is >> sv.name;
     cout<<"\nNhap nam sinh: ";
     is >> sv.year;
     cout<<"\nNhap lop: ";
@@ -42,7 +42,7 @@ ostream& operator<<(ostream& os, SinhVien sv){
 }
 void count(){
     static int stt = 1;
-    cout<<"\nSTT: "<<stt;
+    cout<<"STT: "<<stt;
     stt++;
 }
 bool SinhVien::operator<(SinhVien sv){
@@ -79,18 +79,18 @@ int SinhVien::getDtb(){
     return Dtb;
 }
 void nhapDanhSach(SinhVien sv[], int n){
-    cout<<"\nNhap so luong sinh vien: ";
+    cout<<"\nNhap so luong sinh vien: "<<endl;
     cin>>n ;
-    cout<<"\nNhap danh sach sinh vien!!"<<endl;
+    cout<<"\nNhap danh sach sinh vien!!";
     for(int i=0;i<n;i++){
-        count();
+        count(); 
         cin>>sv[i] ;
     }    
 }
 void xuatDanhSach(SinhVien sv[],int n){
     cout<<"\nXuat danh sach sinh vien!!"<<endl;
     for(int i=0;i<n;i++){
-        count();
+        count(); 
         cout<<sv[i] ;
     }
 }
@@ -117,6 +117,5 @@ int main(){
     thongKe(sv,n);
     return 0;  
 }
-
 
 

@@ -78,9 +78,8 @@ void sapXepTangDanNamSinh(SinhVien sv[], int n){
 int SinhVien::getDtb(){
     return Dtb;
 }
-void nhapDanhSach(SinhVien sv[], int n){
-    cout<<"\nNhap so luong sinh vien: ";
-    cin>>n ;
+void nhapDanhSach(SinhVien &sv[], int n){
+
     cout<<"\nNhap danh sach sinh vien!!"<<endl;
     for(int i=0;i<n;i++){
         count();
@@ -105,7 +104,9 @@ void thongKe(SinhVien sv[],int n){
 }
 int main(){
     SinhVien sv[max];
-    int n;
+    int n;   
+    cout<<"\nNhap so luong sinh vien: ";
+    cin>>n ;
     nhapDanhSach(sv,n);
     xuatDanhSach(sv,n);
     cout<<"\nDanh sach sinh vien giam dan theo diem trung binh";
@@ -117,6 +118,5 @@ int main(){
     thongKe(sv,n);
     return 0;  
 }
-
 
 

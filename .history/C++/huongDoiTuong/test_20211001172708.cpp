@@ -23,7 +23,7 @@ istream& operator >> (istream &is, SinhVien &sv){
     is >> sv.msv;
     cin.ignore();
     cout<<"\nNhap ten sinh vien: ";
-    getline(is,sv.name);
+    geline(is,sv.name);
     cout<<"\nNhap nam sinh: ";
     is >> sv.year;
     cout<<"\nNhap lop: ";
@@ -83,14 +83,14 @@ void nhapDanhSach(SinhVien sv[], int n){
     cin>>n ;
     cout<<"\nNhap danh sach sinh vien!!"<<endl;
     for(int i=0;i<n;i++){
-        count();
+        cout<<"\nNhap sinh vien thu "<<i+1; 
         cin>>sv[i] ;
     }    
 }
 void xuatDanhSach(SinhVien sv[],int n){
     cout<<"\nXuat danh sach sinh vien!!"<<endl;
     for(int i=0;i<n;i++){
-        count();
+        cout<<"\nxuat sinh vien thu "<<i+1;
         cout<<sv[i] ;
     }
 }
@@ -117,6 +117,5 @@ int main(){
     thongKe(sv,n);
     return 0;  
 }
-
 
 

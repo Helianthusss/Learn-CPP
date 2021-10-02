@@ -9,21 +9,23 @@ class SinhVien{
         int msv;
         string name;
         int year;
-        char Class[5];
+        string Class;
         int  Dtb;
     public:
         friend istream& operator >>(istream &is, SinhVien &sv);
         friend ostream& operator <<(ostream& os, SinhVien sv);
+        bool soSanh(SinhVien sv);
         bool operator >(SinhVien sv);
         bool operator <(SinhVien sv);
         int getDtb();
+        void thongKe(SinhVien sv, int n);
 };
 istream& operator >> (istream &is, SinhVien &sv){
     cout<<"\nNhap ma sinh vien: ";
     is >> sv.msv;
     cin.ignore();
     cout<<"\nNhap ten sinh vien: ";
-    getline(is,sv.name);
+    is >> sv.name;
     cout<<"\nNhap nam sinh: ";
     is >> sv.year;
     cout<<"\nNhap lop: ";
@@ -40,9 +42,15 @@ ostream& operator<<(ostream& os, SinhVien sv){
     os<<"\nDiem trung binh: "<<sv.Dtb;
     return os;
 }
+bool SinhVien::soSanh(SinhVien sv){
+    if(Dtb > sv.Dtb) 
+       return true;
+    else 
+        return false;
+}
 void count(){
     static int stt = 1;
-    cout<<"\nSTT: "<<stt;
+    cout<<"STT: "<<stt;
     stt++;
 }
 bool SinhVien::operator<(SinhVien sv){
@@ -52,71 +60,56 @@ bool SinhVien::operator>(SinhVien sv){
    return year > sv.year;
 }
 void sapXepGiamdanDtb(SinhVien sv[], int n){
-    SinhVien temp;
     for(int i=0;i<n-1;i++){
         for(int j=i=1;j<n;j++){
-            if(sv[i]<sv[j]){
-                temp =sv[i];
-                sv[i] = sv[j];
-                sv[j] = temp;
-            }
+            if(sv[i]<sv[j]) swap(sv[i],sv[j]);
         }
     }
 }
 void sapXepTangDanNamSinh(SinhVien sv[], int n){
-    SinhVien temp;
     for(int i=0;i<n-1;i++){
         for(int j=i=1;j<n;j++){
-            if(sv[i]>sv[j]){
-               temp =sv[i];
-               sv[i] = sv[j];
-               sv[j] = temp;
-            }     
+            if(sv[i]>sv[j]) swap(sv[i],sv[j]);
         }
     }
 }
 int SinhVien::getDtb(){
     return Dtb;
 }
-void nhapDanhSach(SinhVien sv[], int n){
-    cout<<"\nNhap so luong sinh vien: ";
-    cin>>n ;
-    cout<<"\nNhap danh sach sinh vien!!"<<endl;
-    for(int i=0;i<n;i++){
-        count();
-        cin>>sv[i] ;
-    }    
-}
-void xuatDanhSach(SinhVien sv[],int n){
-    cout<<"\nXuat danh sach sinh vien!!"<<endl;
-    for(int i=0;i<n;i++){
-        count();
-        cout<<sv[i] ;
+void SinhVien::thongKe(SinhVien sv, int n){
+    int count = 0;
+    for(int i=0;i< n; i++){
+        if(sv.getDtb <1) count++;
     }
-}
-void thongKe(SinhVien sv[],int n){
-    int count=0;
-    for(int i=0;i<n;i++){
-        if(sv[i].getDtb() < 1){
-            count++;
-        }
-    }
-    cout<<"\nSo luong sinh vien thuoc dien canh cao hoc tap la: "<<count;
 }
 int main(){
     SinhVien sv[max];
     int n;
-    nhapDanhSach(sv,n);
-    xuatDanhSach(sv,n);
-    cout<<"\nDanh sach sinh vien giam dan theo diem trung binh";
+    cout<<"\nNhap so luong sinh vien: ";
+    cin>>n;
+    cout<<"\nNhap danh sach sinh vien!!";
+    for(int i=0;i<n;i++){
+        count(); 
+        cin>>sv[i] ;
+    } 
+    cout<<"\nXuat danh sach sinh vien!!";
+    for(int i=0;i<n;i++){
+        count(); 
+        cout<<sv[i] ;
+    }
+    cout<<"\nSap xep sinh vien giam dan theo diem trung binh";
     sapXepGiamdanDtb(sv,n);
-    xuatDanhSach(sv,n);
-    cout<<"\nDanh sach sinh vien tang dan theo nam sinh";
+    for(int i=0;i<n;i++){
+        count(); 
+        cout<<sv[i] ;
+    }
     sapXepTangDanNamSinh(sv,n);
-    xuatDanhSach(sv,n);
-    thongKe(sv,n);
+    for(int i=0;i<n;i++){
+        count(); 
+        cout<<sv[i] ;
+    }
+    sv.thongKe(sv,n);
     return 0;  
 }
-
 
 

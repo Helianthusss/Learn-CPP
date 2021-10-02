@@ -9,7 +9,7 @@ class SinhVien{
         int msv;
         string name;
         int year;
-        char Class[5];
+        string Class;
         int  Dtb;
     public:
         friend istream& operator >>(istream &is, SinhVien &sv);
@@ -23,7 +23,7 @@ istream& operator >> (istream &is, SinhVien &sv){
     is >> sv.msv;
     cin.ignore();
     cout<<"\nNhap ten sinh vien: ";
-    getline(is,sv.name);
+    is >> sv.name;
     cout<<"\nNhap nam sinh: ";
     is >> sv.year;
     cout<<"\nNhap lop: ";
@@ -42,7 +42,7 @@ ostream& operator<<(ostream& os, SinhVien sv){
 }
 void count(){
     static int stt = 1;
-    cout<<"\nSTT: "<<stt;
+    cout<<"STT: "<<stt;
     stt++;
 }
 bool SinhVien::operator<(SinhVien sv){
@@ -52,7 +52,7 @@ bool SinhVien::operator>(SinhVien sv){
    return year > sv.year;
 }
 void sapXepGiamdanDtb(SinhVien sv[], int n){
-    SinhVien temp;
+    int temp;
     for(int i=0;i<n-1;i++){
         for(int j=i=1;j<n;j++){
             if(sv[i]<sv[j]){
@@ -64,7 +64,7 @@ void sapXepGiamdanDtb(SinhVien sv[], int n){
     }
 }
 void sapXepTangDanNamSinh(SinhVien sv[], int n){
-    SinhVien temp;
+    int temp;
     for(int i=0;i<n-1;i++){
         for(int j=i=1;j<n;j++){
             if(sv[i]>sv[j]){
@@ -81,27 +81,26 @@ int SinhVien::getDtb(){
 void nhapDanhSach(SinhVien sv[], int n){
     cout<<"\nNhap so luong sinh vien: ";
     cin>>n ;
-    cout<<"\nNhap danh sach sinh vien!!"<<endl;
+    cout<<"\nNhap danh sach sinh vien!!";
     for(int i=0;i<n;i++){
-        count();
+        count(); 
         cin>>sv[i] ;
     }    
 }
 void xuatDanhSach(SinhVien sv[],int n){
-    cout<<"\nXuat danh sach sinh vien!!"<<endl;
+    cout<<"\nXuat danh sach sinh vien!!";
     for(int i=0;i<n;i++){
-        count();
+        count(); 
         cout<<sv[i] ;
     }
 }
-void thongKe(SinhVien sv[],int n){
-    int count=0;
+void SinhVien::thongKe(SinhVien sv[],int n){
     for(int i=0;i<n;i++){
-        if(sv[i].getDtb() < 1){
-            count++;
+        if(sv[i].getDtb < 1){
+            count(); 
+           cout<<sv[i] ;
         }
     }
-    cout<<"\nSo luong sinh vien thuoc dien canh cao hoc tap la: "<<count;
 }
 int main(){
     SinhVien sv[max];
@@ -111,12 +110,10 @@ int main(){
     cout<<"\nDanh sach sinh vien giam dan theo diem trung binh";
     sapXepGiamdanDtb(sv,n);
     xuatDanhSach(sv,n);
-    cout<<"\nDanh sach sinh vien tang dan theo nam sinh";
     sapXepTangDanNamSinh(sv,n);
     xuatDanhSach(sv,n);
-    thongKe(sv,n);
+
     return 0;  
 }
-
 
 
