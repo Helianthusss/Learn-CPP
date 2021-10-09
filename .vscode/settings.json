@@ -72,7 +72,8 @@
     "cwctype": "cpp",
     "memory_resource": "cpp",
     "optional": "cpp",
-    "typeindex": "cpp"
+    "typeindex": "cpp",
+    "random": "cpp"
   },
   "python.pythonPath": "C:\\Users\\ASIA\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
 }

@@ -42,6 +42,7 @@ ostream& operator<<(ostream& os, SinhVien sv){
 }
 void count(){
     static int stt = 1;
+    int n;
     if(stt<=n){
     cout<<"\nSTT: "<<stt;
     stt++;

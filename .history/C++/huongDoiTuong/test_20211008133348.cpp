@@ -16,7 +16,7 @@ class SinhVien{
         friend ostream& operator <<(ostream& os, SinhVien sv);
         bool operator >(SinhVien sv);
         bool operator <(SinhVien sv);
-        float getDtb();
+        int getDtb();
 };
 istream& operator >> (istream &is, SinhVien &sv){
     cout<<"\nNhap ma sinh vien: ";
@@ -41,6 +41,7 @@ ostream& operator<<(ostream& os, SinhVien sv){
     return os;
 }
 void count(){
+    
     static int stt = 1;
     if(stt<=n){
     cout<<"\nSTT: "<<stt;
@@ -78,7 +79,7 @@ void sapXepTangDanNamSinh(SinhVien sv[], int n){
         }
     }
 }
-float SinhVien::getDtb(){
+int SinhVien::getDtb(){
     return Dtb;
 }
 void nhapDanhSach(SinhVien sv[], int n){
