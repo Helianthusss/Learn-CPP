@@ -1,0 +1,11 @@
+body {
+  border: 3px solid #00ff00;
+  width: 860px;
+  height: 820px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+.sen1{
+    width: 20% ;
+    border: 2px solid rgb(187, 91, 187)"
+}

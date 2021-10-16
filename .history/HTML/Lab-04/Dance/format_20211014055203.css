@@ -1,0 +1,27 @@
+li {
+  display: inline;
+}
+
+#navbar {
+  padding: 8px;
+  background-color: #faf1c4;
+}
+a {
+  padding-left: 20px;
+  margin: 10px;
+  color: blue;
+}
+.x {
+  padding: 9px;
+  margin: 10px;
+  background-color: blue;
+  color: white;
+}
+#links,
+#content {
+  float: left;
+  width: 33.33%;
+}
+img {
+  margin: right;
+}

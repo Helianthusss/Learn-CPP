@@ -1,0 +1,12 @@
+article {
+  float: left;
+  width: 33.33%;
+  background-color: rgb(36, 33, 33);
+  color: white;
+  width: 900px;
+  padding: 100px;
+}
+.price {
+  color: green;
+  size: 100px;
+}

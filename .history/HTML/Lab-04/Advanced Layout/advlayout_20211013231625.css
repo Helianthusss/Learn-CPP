@@ -1,0 +1,15 @@
+body {
+  background-image: url(../image/smile-face.png);
+}
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #e9d8f4;
+}
+#clear {
+  background-color: black;
+}

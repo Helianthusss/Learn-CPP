@@ -1,0 +1,16 @@
+body {
+  background-color: #79f5e8;
+}
+li {
+  display: inline;
+}
+#topnav {
+  background-color: #faf1c4;
+}
+a {
+  padding-left: 20px;
+  color: blue;
+}
+table {
+  background-color: #f49a2e;
+}

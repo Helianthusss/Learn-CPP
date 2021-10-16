@@ -1,0 +1,26 @@
+#darkblue {
+  background-image: url(graphics/bkgd.gif);
+  display: inline-block;
+  vertical-align: middle;
+}
+#topright {
+  margin: auto;
+  width: 50%;
+  padding: 0px;
+}
+
+li {
+  display: inline;
+}
+#topnav #navbar {
+  background-color: aquamarine;
+  padding: 3px;
+}
+#maincontent {
+  background-color: #e9d8f4;
+  text-align: center;
+  padding: 10px;
+}
+#footer {
+  background-color: blue;
+}

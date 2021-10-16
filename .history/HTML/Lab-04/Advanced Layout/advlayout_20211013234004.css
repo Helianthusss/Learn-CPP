@@ -1,0 +1,14 @@
+body {
+  background-image: url(../image/smile-face.png);
+}
+h1 {
+  text-align: center;
+}
+li {
+  overflow: hidden;
+}
+
+#maincontent {
+  background-color: #e9d8f4;
+  text-align: center;
+}

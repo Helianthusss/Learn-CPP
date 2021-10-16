@@ -1,0 +1,35 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+li {
+  display: inline;
+}
+
+#navbar {
+  padding: 8px;
+  background-color: #faf1c4;
+}
+a {
+  padding-left: 20px;
+  margin: 10px;
+  color: blue;
+}
+.x {
+  padding: 9px;
+  margin: 10px;
+  background-color: blue;
+  color: white;
+}
+
+#content {
+  background: #fff;
+  margin-top: 30px;
+  float: right;
+  width: 85%;
+  padding-right: 50px;
+  height: 350px;
+  line-height: 30px;
+  padding-top: 0px;
+}

@@ -1,0 +1,21 @@
+body {
+  background-image: url(../image/smile-face.png);
+}
+h1 {
+  text-align: center;
+}
+li {
+  float: left;
+}
+
+div#topnav #navbar {
+  display: block;
+  padding: 30px;
+  margin: 15px;
+  background-color: rgb(76, 244, 239);
+}
+
+#maincontent {
+  background-color: #e9d8f4;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+article {
+  float: left;
+  width: 33.33%;
+  background-color: black;
+  color: white;
+}
+.price {
+  color: green;
+  size: 100px;
+}

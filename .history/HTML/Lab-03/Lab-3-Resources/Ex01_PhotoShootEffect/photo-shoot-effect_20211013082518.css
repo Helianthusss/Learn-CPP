@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(86, 131, 228);
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+h3 {
+  margin-left: 10px;
+  color: white;
+}
+nav {
+  overflow: hidden;
+}
+table {
+  background-color: rgb(33, 62, 126);
+  width: 1000px;
+  height: 100%;
+  text-align: center;
+}
+footer {
+  text-align: center;
+}

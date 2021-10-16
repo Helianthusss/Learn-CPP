@@ -1,0 +1,12 @@
+li {
+  display: inline;
+}
+
+#navbar {
+  padding: 8px;
+  background-color: #faf1c4;
+}
+a {
+  padding-left: 20px;
+  background-color: blue;
+}
