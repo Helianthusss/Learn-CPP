@@ -1,0 +1,50 @@
+ /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+
+  }
+  body {
+
+  }
+  .clearfix {
+    zoom: 1;
+  }
+  .clearfix:after {
+
+  }
+  
+  /* Layout */
+  .client {
+
+  }
+  .client h2 {
+
+  }
+  /* Line cho h2 */
+  .client h2:after {
+
+  }
+  .client .client-list li {
+
+  }
+  .client .client-list li:nth-child(3n) {
+
+  }
+  .client .client-list li .avatar {
+
+  }
+  .client .client-list li .avatar img {
+
+  }
+  .client .client-list li .message {
+
+  }
+  .client .client-list li .message .detail {
+
+  }
+  .client .client-list li .message .name {
+
+  }

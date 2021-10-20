@@ -18,7 +18,9 @@ bool isPrimeNumber(int n){
 
 int main(int argc, char** argv) {
 	int n,sum=0;
+	cout << "\nNhap n: ";
 	cin>>n;
+	cout<<"\nCac so nguyen to la: ";
 	for(int i=0; i<=n;i++){
 		if(isPrimeNumber(i))
 		    sum+=i;
