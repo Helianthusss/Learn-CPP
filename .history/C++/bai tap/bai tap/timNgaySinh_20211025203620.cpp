@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 bool timeTest(int day, int month, int year){
