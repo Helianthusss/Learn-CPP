@@ -1,84 +1,78 @@
-$('.side-bar__item').click(function() {
+$(".side-bar__item").click(function () {
+  $(".side-bar__item").removeClass("side-bar__item--active");
+  $(this).addClass("side-bar__item--active");
 
-    $('.side-bar__item').removeClass('side-bar__item--active')
-    $(this).addClass('side-bar__item--active')
+  let $indicator = $(".side-bar__indicator");
 
-    let $indicator = $('.side-bar__indicator')
+  let previousOffset = $indicator.parent(".side-bar__item").offset();
+  let currentOffset = $(this).offset(); //{ top, left }
 
-    let previousOffset = $indicator.parent('.side-bar__item').offset()
-    let currentOffset = $(this).offset() //{ top, left }
+  let distance = currentOffset.top - previousOffset.top;
 
-    let distance = currentOffset.top - previousOffset.top
+  $indicator.css("transform", "translateY(" + distance + "px)");
+});
 
-    $indicator.css('transform', 'translateY(' + distance + 'px)')
+$.fn.switchButton = function () {
+  let $switchButtons = this;
+  let $switchButtonReplaced = $();
 
-})
+  $switchButtons.each(function () {
+    let $switchButton = $('<div class="switch-button"></div>');
+    let $input = $('<input type="hidden"/>').val($(this).val());
+    let $label = $('<label for="" class="switch-button__label">OFF</label>');
+    let $background = $('<span class="switch-button__background"></span>');
+    let $indicator = $('<span class="switch-button__indicator"></span>');
 
-$.fn.switchButton = function() {
-    let $switchButtons = this
-    let $switchButtonReplaced = $()
+    $indicator.appendTo($background);
 
-    $switchButtons.each(function() {
-        let $switchButton = $('<div class="switch-button"></div>')
-        let $input = $('<input type="hidden"/>').val($(this).val())
-        let $label = $('<label for="" class="switch-button__label">OFF</label>')
-        let $background = $('<span class="switch-button__background"></span>')
-        let $indicator = $('<span class="switch-button__indicator"></span>')
+    $input.appendTo($switchButton);
+    $label.appendTo($switchButton);
+    $background.appendTo($switchButton);
 
-        $indicator.appendTo($background)
+    $(this).replaceWith($switchButton);
 
-        $input.appendTo($switchButton)
-        $label.appendTo($switchButton)
-        $background.appendTo($switchButton)
+    $switchButtonReplaced = $switchButtonReplaced.add($switchButton);
 
-        $(this).replaceWith($switchButton)
+    $switchButton.click(function () {
+      let $input = $(this).children("input");
+      let $label = $(this).children(".switch-button__label");
 
-        $switchButtonReplaced = $switchButtonReplaced.add($switchButton)
+      let value = $input.val();
 
+      if (value === "true") {
+        $label.text("OFF");
+        $input.val("false");
+      } else {
+        $label.text("ON");
+        $input.val("true");
+      }
 
-        $switchButton.click(function() {
-            let $input = $(this).children('input')
-            let $label = $(this).children('.switch-button__label')
+      $switchButton.trigger("change", $input.val());
+    });
+  });
 
-            let value = $input.val()
+  return $switchButtonReplaced;
+};
 
-            if (value === 'true') {
-                $label.text('OFF')
-                $input.val('false')
-            } else {
-                $label.text('ON')
-                $input.val('true')
-            }
+$.fn.switchCard = function () {
+  let $cards = this;
+  let $switchButtons = $cards.find(".switch-button").switchButton();
+  $switchButtons.on("change", function (e, value) {
+    let switchButton = this;
 
-            $switchButton.trigger('change', $input.val())
-        })
+    $cards.each(function (index, card) {
+      if (card.contains(switchButton)) {
+        let $card = $(card);
+        if (value === "true") {
+          $card.addClass("xcard--active");
+        } else {
+          $card.removeClass("xcard--active");
+        }
+      }
+    });
+  });
+};
 
+$(".xcard").switchCard();
 
-    })
-
-    return $switchButtonReplaced
-}
-
-$.fn.switchCard = function() {
-    let $cards = this
-    let $switchButtons = $cards.find('.switch-button').switchButton()
-    $switchButtons.on('change', function(e, value) {
-        let switchButton = this
-
-        $cards.each(function(index, card) {
-            if (card.contains(switchButton)) {
-                let $card = $(card)
-                if (value === 'true') {
-                    $card.addClass('xcard--active')
-                } else {
-                    $card.removeClass('xcard--active')
-                }
-            }
-        })
-    })
-}
-
-
-$('.xcard').switchCard()
-
-$('.living-room-temperature .switch-button').switchButton()
+$(".living-room-temperature .switch-button").switchButton();
