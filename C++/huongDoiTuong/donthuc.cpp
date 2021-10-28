@@ -4,20 +4,20 @@
 using namespace std;
 class DonThuc{
     private:
-       int bac,heso;
+        int bac,heso;
     public:
-       void nhap();
-       void xuat();
-       int getBac();
-       int getHeSo();
-       void giaTri();
-       void soSanh(const DonThuc &);
-       void daoHam();
-       void nguyenHam();
-       void tong(const DonThuc &b);
-       void hieu(const DonThuc &);
-       void tich(DonThuc &);
-       void thuong(DonThuc &);  
+        void nhap();
+        void xuat();
+        int getBac();
+        int getHeSo();
+        void giaTri();
+        void soSanh(const DonThuc &);
+        void daoHam();
+        void nguyenHam();
+        void tong(const DonThuc &b);
+        void hieu(const DonThuc &);
+        void tich(DonThuc &);
+        void thuong(DonThuc &);  
 };
 void DonThuc::nhap(){
     cout<<"\nNhap bac don thuc:";
@@ -47,7 +47,7 @@ void DonThuc::soSanh(const DonThuc &b){
         else cout <<"\n hai da thuc bang nhau";
     }
     else 
-      cout<<"\n2 da thuc khac bac nhau";
+        cout<<"\n2 da thuc khac bac nhau";
 }
 void DonThuc::daoHam(){
     cout<<"\nDao ham don thuc: "<<heso*bac<<"x^"<<bac-1;
@@ -60,14 +60,14 @@ void DonThuc::tong(const DonThuc &b){
         cout<<"\nTong 2 don thuc la: "<<this->heso+b.heso<<"x^"<<bac;
     }
     else
-       cout <<"\nHai da thuc khong cung bac";
+        cout <<"\nHai da thuc khong cung bac";
 }
 void DonThuc::hieu(const DonThuc &b){
     if( this->bac== b.bac){
         cout<<"\nHieu 2 don thuc la: "<<this->heso-b.heso<<"x^"<<bac;
     }
     else
-       cout <<"\nHai da thuc khong cung bac";
+        cout <<"\nHai da thuc khong cung bac";
 }
 void DonThuc::tich(DonThuc &b){
     cout<<"\nTich 2 don thuc la: "<<this->heso*b.heso<<"x^"<<this->bac+b.bac;
@@ -87,10 +87,9 @@ int main(){
     b.daoHam();
     a.nguyenHam();
     b.nguyenHam();
-   a.soSanh(b);
-   a.tong(b);
-   a.hieu(b);
-   a.tich(b);
-   a.thuong(b);
-
+    a.soSanh(b);
+    a.tong(b);
+    a.hieu(b);
+    a.tich(b);
+    a.thuong(b);
 }
