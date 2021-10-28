@@ -1,11 +1,9 @@
-// // console.log('tadaa');
-// var x=1,y=2;
-// console.log(x+y);
-
-// chaythu= function(){
-// 	console.log('ditmemay');
-// }
-var diem=4;
-if(diem==4) {
-	console.log('trung binh');
+var dongho={
+	hangsx: "casio",
+	mau:"den",
+	gioitinh:"nam",
+	hienthingay: function(){
+		console.log("hom nay troi dep lam");
+	}
 }
+console.log(dongho.hienthingay());

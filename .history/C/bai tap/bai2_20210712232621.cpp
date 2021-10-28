@@ -8,5 +8,4 @@ int main(){
         s=s+pow(i,2);
     }
     printf("\nTong la: %d",s);
-    return 0;
 }

@@ -12,7 +12,7 @@ int main(){
 	a=new int;
 	do{
         cout<<"\n Nhap n: ";
-		cin>>n;
+	    cin>>n;
 		if(n<=0 || n>=100)
 		    cout<<"\nNhap lai n!!";
 	}while(n<=0 || n>=100);
