@@ -1,0 +1,25 @@
+Mô hình thuật toán sinh được dùng để giải lớp các bài toán liệt kê, bài toán đếm,
+bài toán tối ưu, bài toán tồn tại thỏa mãn hai điều kiện:
+• Điều kiện 1: Có thể xác định được một thứ tự trên tập các cấu hình cần liệt kê
+của bài toán. Biết cấu hình đầu tiên, biết cấu hình cuối cùng.
+• Điều kiện 2: Từ một cấu hình chưa phải cuối cùng, ta xây dựng được thuật
+toán sinh ra cấu hình đứng ngay sau nó.
+Mô hình thuật toán sinh được biểu diễn thành hai bước: bước khởi tạo và bước lặp.
+Tại bước khởi tạo, cấu hình đầu tiên của bài toán sẽ được thiết lập. Điều này bao giờ cũng
+thực hiện được theo giả thiết của bài toán. Tại bước lặp, quá trình lặp được thực hiện khi
+gặp phải cấu hình cuối cùng. Điều kiện lặp của bài toán bao giờ cũng tồn tại theo giả thiết
+của bài toán. Hai chỉ thị cần thực hiện trong thân vòng lặp là đưa ra cấu hình hiện tại và
+sinh ra cấu hình kế tiếp. Mô hình sinh kế tiếp được thực hiện tùy thuộc vào mỗi bài toán
+cụ thể. Tổng quát, mô hình thuật toán sinh được thể hiện như dưới đây.
+
+Thuật toán Generation;
+begin
+Bước1 (Khởi tạo):
+<Thiết lập cấu hình đầu tiên>;
+Bước 2 (Bước lặp):
+while (<Lặp khi cấu hình chưa phải cuối cùng>) do
+<Đưa ra cấu hình hiện tại>;
+<Sinh ra cấu hình kế tiếp>;
+
+endwhile;
+End.

@@ -1,0 +1,21 @@
+Giả sử ta cần xác định bộ X =(x1, x2,..,xn) thỏa mãn một số ràng buộc nào đó. Ứng
+với mỗi thành phần xi ta có ni khả năng cần lựa chọn. Ứng với mỗi khả năng jni dành
+cho thành phần xi ta cần thực hiện:
+
+• Kiểm tra xem khả năng j có được chấp thuận cho thành phần xi hay
+không? Nếu khả năng j được chấp thuận thì ta xác định thành phần xi theo
+khả năng j. Nếu i là thành phần cuối cùng (i=n) ta ghi nhận nghiệm của bài
+toán. Nếu i chưa phải cuối cùng ta xác định thành phần thứ i +1.
+• Nếu không có khả năng j nào được chấp thuận cho thành phần xi thì ta
+quay lại bước trước đó (i-1) để thử lại các khả năng còn lại.
+
+Thuật toán quay lui được mô tả như sau:
+Thuật toán Back-Track ( int i ) {
+for ( j =<Khả năng 1>; j <=ni; j++ ){
+if (<chấp thuận khả năng j>) {
+X[i] = <khả năng j>;
+if ( i ==n) Result();
+else Back-Track(i+1);
+
+}
+}

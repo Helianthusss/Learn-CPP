@@ -1,0 +1,13 @@
+Phương pháp qui hoạch động dùng để giải lớp các bài toán thỏa mãn những điều
+kiện sau:
+• Bài toán lớn cần giải có thể phân rã được thành nhiều bài toán con. Trong đó, sự
+phối hợp lời giải của các bài toán con cho ta lời giải của bài toán lớn. Bài toán con
+có lời giải đơn giản được gọi là cơ sở của qui hoạch động. Công thức phối hợp
+nghiệm của các bài toán con để có nghiệm của bài toán lớn được gọi là công thức
+truy hồi của qui hoạch động.
+• Phải có đủ không gian vật lý lưu trữ lời giải các bài toán con (Bảng phương án của
+qui hoạch động). Vì qui hoạch động đi giải quyết tất cả các bài toán con, do vậy nếu ta không lưu trữ được lời giải các bài toán con thì không thể phối hợp được lời giải
+giữa các bài toán con.
+• Quá trình giải quyết từ bài toán cơ sở (bài toán con) để tìm ra lời giải bài toán lớn
+phải được thực hiện sau hữu hạn bước dựa trên bảng phương án của qui hoạch
+động.
