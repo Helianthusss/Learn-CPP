@@ -1,0 +1,41 @@
+Tư tưởng cơ bản của thuật toán tìm kiếm theo chiều sâu là bắt đầu tại một đỉnh v0
+nào đó, chọn một đỉnh u bất kỳ kề với v0 và lấy nó làm đỉnh duyệt tiếp theo. Cách duyệt
+tiếp theo được thực hiện tương tự như đối với đỉnh v0 với đỉnh bắt đầu là u. 
+Để kiểm tra việc duyệt mỗi đỉnh đúng một lần, chúng ta sử dụng một mảng
+chuaxet[] gồm n phần tử (tương ứng với n đỉnh), nếu đỉnh thứ u đã được duyệt, phần tử
+tương ứng trong mảng chuaxet[u] có giá trị FALSE. Ngược lại, nếu đỉnh chưa được
+duyệt, phần tử tương ứng trong mảng có giá trị TRUE.
+Biểu diễn thuật toán DFS(u):
+Thuật toán DFS (u): //u là đỉnh bắt đầu duyệt
+Begin
+<Thăm đỉnh u>;//duyệt đỉnh u
+chuaxet[u] := FALSE;//xác nhận đỉnh u đã duyệt
+for each v ke(u) do //lấy mỗi đỉnh vKe(u).
+if (chuaxet[v] ) then //vếu đỉnh v chưa duyệt
+DFS(v); //duyệt theo chiều sâu bắt đầu từ đỉnh v
+EndIf;
+EndFor;
+End.
+Thuật toán DFS(u):
+Begin
+Bước 1 (Khởi tạo):
+stack = ; //Khởi tạo stack là 
+Push(stack, u); //Đưa đỉnh u vào ngăn xếp
+<Thăm đỉnh u>; //Duyệt đỉnh u
+chuaxet[u] = False; //Xác nhận đỉnh u đã duyệt
+Bước 2 (Lặp) :
+while ( stack   ) do
+s = Pop(stack); //Loại đỉnh ở đầu ngăn xếp
+for each t Ke(s) do //Lấy mỗi đỉnh tKe(s)
+if ( chuaxet[t] ) then //Nếu t đúng là chưa duyệt
+<Thăm đỉnh t>; // Duyệt đỉnh t
+chuaxet[t] = False; // Xác nhận đỉnh t đã duyệt
+Push(stack, s);//Đưa s vào stack
+Push(stack, t); //Đưa t vào stack
+break; //Chỉ lấy một đỉnh t
+EndIf;
+EndFor;
+EndWhile;
+Bước 3 (Trả lại kết quả):
+Return(<Tập đỉnh đã duyệt>);
+End.
