@@ -1,33 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
-typedef struct Node
-{
+typedef struct Node{
     int data;
     Node* left;
     Node* right;
 } node_t;
-void Free( node_t* root )
-{
-    if ( root == NULL )
-        return;
+void Free( node_t* root ){
+    if ( root == NULL ) return;
     Free( root->left );
     Free( root->right );
     free( root );
 }
-
-int LeftOf( const int value, const node_t* root )
-{
+int LeftOf( const int value, const node_t* root ){
     return value < root->data;
 }
-int RightOf( const int value, const node_t* root )
-{
+int RightOf( const int value, const node_t* root ){
     return value > root->data;
 }
-node_t* Insert( node_t* root, const int value )
-{
-    if ( root == NULL )
-    {
+node_t* Insert( node_t* root, const int value ){
+    if ( root == NULL ){
         node_t* node = (node_t*)malloc( sizeof( node_t ) );
         node->left = NULL;
         node->right = NULL;
@@ -42,31 +33,26 @@ node_t* Insert( node_t* root, const int value )
 }
 
 void PreOrder(node_t* root){
-    if(root != NULL)
-    {
+    if(root != NULL){
         printf("%d ", root->data);
         PreOrder(root->left);
         PreOrder(root->right);
     }
 }
 
-int height(node_t*root)
-{
-  int h = 0;
-  if(root != NULL)
-  {
+int height(node_t*root){
+    int h = 0;
+    if(root != NULL){
     int lHeight = height(root->left);
     int rHeight = height(root->right);
     int maxHeight = max(lHeight,rHeight);
     h = maxHeight+1;
-  }
-  return h;
+    }
+    return h;
 }
 
-int main()
-{
+int main(){
     node_t* root = NULL;
- 
     root = Insert( root, 10 );
     root = Insert( root, 5 );
     root = Insert( root, 1 );
