@@ -1,0 +1,31 @@
+//khai bao
+vector<kieu du lieu > arr;
+array < kieu du lieu, so phan tu>arr;
+size(); kích thước mảng
+empty();
+push_back(); thêm ptu vào
+begin(); phần tử đầu tiên
+end(); phân tử cuối cùng
+erase(); xóa
+
+iterator 
+
+for(int <int> :: iterator it = v.begin(); it != v.end;++it)
+cout << *it<<" ";
+for (auto it = v.begin(); it != v.end();it = next (it))
+cout << *it << " ";
+
+2 chiều
+
+vector <vector <int>>arr;
+
+pair 
+pair <type1, type2>p;
+make_pair (a,b); trả về giá trị a,begin();
+pair.first; giá trị đầu tiên
+pair.second; giá trị thứ 2 
+
+Tuples
+tuple<type1,type2,...,typeN>arr;
+make_type(); trả về giá trị
+get<i>(arr); trả về i phần tử thứ của arr
