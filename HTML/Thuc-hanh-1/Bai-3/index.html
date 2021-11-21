@@ -3,6 +3,7 @@
 <head>
   <title>Shop Around</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
   <div class="boundary">
@@ -10,7 +11,20 @@
     <div id="main">
       <div id="left">
         <!-- begin category -->
-        
+        <div class="category">
+          <div class="title">Category</div>
+          <div class="box-category">
+            <ul>
+              <li><a href="#"><img src="images/cat.gif"> Category 1</a></li>
+              <li><a class="active" href="#"><img src="images/cat.gif"> Category 2</a></li>
+              <li><a href="#"><img src="images/cat.gif"> Category 3</a></li>
+              <li><a href="#"> <img src="images/cat.gif"> Category 4</a></li>
+              <li><a href="#"> <img src="images/cat.gif"> Category 5</a></li>
+              <li><a href="#"><img src="images/cat.gif"> Category 6</a></li>
+              <li><a href="#"><img src="images/cat.gif"> Category 7</a></li>
+            </ul>
+          </div>
+        </div>
         <!-- end category -->
         
         <!-- begin search -->
@@ -30,7 +44,7 @@
               </select>
               <label for="from">Price</label>
               <input type="text" name="from" id="from" size="5"> to <input type="text" name="to" id="to" size="5"> <br>
-              <input type="submit" value="search" name="submit" id="submit">
+              <input type="submit" value="search" name="submit" id="submit" onclick="return validate()">
             </form>
             <div> 
               <img src="images/bul.gif" alt=""> 

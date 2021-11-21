@@ -11,7 +11,56 @@ body{
 }
 
 /*begin header*/
-
+#search{
+	margin-top: 10px;
+	float: right; 
+	margin-right: 80px;
+}
+#text-search{
+	width: 250px;
+	height: 22px;
+	border: 1px solid rgb(201, 201, 201);
+}
+#click{
+	height: 27px;
+	background-color: greenyellow;
+	font-weight: bolder;
+	border: 1px solid greenyellow;
+}
+#nav{
+	margin-left: 500px;
+}
+#nav ul{
+	float: right;
+	list-style: none;
+	
+	margin-right: 65px;
+}
+#nav ul li{
+	display: inline;
+}
+#nav ul li a{
+	padding: 0 15px;
+	color: gray;
+	font-family: 'Courier New', Courier, monospace;
+	border-right: 1px solid gray;
+	font-weight: bolder;
+}
+#nav ul li:last-child a{
+	border-right: none;
+}
+#nav ul li a:hover{
+	color: greenyellow;
+	font-weight: bolder;
+}
+#nav ul li a.active{
+	color: greenyellow;
+	font-weight: bolder;
+}
+#pink{
+	color: palevioletred;
+	font-weight: bolder;
+}
 /*end header*/
 /*begin left grid items*/
 .leftgrid{

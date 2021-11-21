@@ -42,7 +42,25 @@ body{
 }
 /*end right side bar*/
 /*begin categories*/
-
+.categories{
+	float: left;
+}
+.categories input{
+	width: 270px;
+	height: 20px;
+	outline-style: none;
+	background-color: #F9F9F9;
+}
+.categories input[type=text]{
+	display: block;
+  	margin: 0 auto;
+  	border: none;
+	line-height: 20px;
+  	border-bottom: 2px solid rgba(0,0,0,.2);
+  	margin-bottom: 15px;
+  	font-size: 1em;
+  	color: rgba(0,0,0,.4);
+}
 /*end catetories*/
 /*begin footer*/
 .footer{

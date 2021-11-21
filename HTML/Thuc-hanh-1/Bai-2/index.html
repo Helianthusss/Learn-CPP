@@ -3,6 +3,7 @@
 <head>
   <title>Shop Around</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
   <div class="boundary">
@@ -26,7 +27,7 @@
               </select>
               <label for="from">Price</label>
               <input type="text" name="from" id="from" size="5"> to <input type="text" name="to" id="to" size="5"> <br>
-              <input type="submit" value="search" name="submit" id="submit">
+              <input type="submit" value="search" name="submit" id="submit" onclick="return validate()">
             </form>
             <div> 
               <img src="images/bul.gif" alt=""> 

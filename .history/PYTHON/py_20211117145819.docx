@@ -1,0 +1,31 @@
+append():	Adds an element at the end of the list // Thêm một phần tử vào cuối danh sách
+clear():	Removes all the elements from the list // Xóa tất cả các phần tử khỏi bản sao danh sách
+copy(): 	Returns a copy of the list // Trả về một bản sao của số danh sách
+count():	Returns the number of elements with the specified value // Trả về số phần tử có giá trị được chỉ định mở rộng
+extend():	Add the elements of a list (or any iterable), to the end of the current list // Thêm các phần tử của danh sách (hoặc bất kỳ có thể lặp lại), đến cuối chỉ mục danh sách hiện tại
+index():	Returns the index of the first element with the specified value // Trả về chỉ mục của phần tử đầu tiên với giá trị được chỉ định
+insert():	Adds an element at the specified position // Thêm phần tử ở vị trí đã chỉ định
+pop():  	Removes the element at the specified position // Xóa phần tử ở vị trí đã chỉ định
+remove():	Removes the first item with the specified value // Loại bỏ mục đầu tiên có giá trị được chỉ định đảo ngược
+reverse():	Reverses the order of the list // Đảo ngược thứ tự của danh sách sắp xếp
+sort(): 	Sorts the list  // sắp xếp danh sách
+list
+len(): số phần tử trong list 
+max(), min(): trả về phần tử lớn nhất và nhỏ nhất trong list
+insert(): thêm 1 phanf tử vào vị trí
+remove(): xóa phần tử khỏi list
+pop(): xóa phần tử với chỉ số cho trước trong list  
+sort(): sắp xép phần tử trong list
+reverse(): đảo ngược trong list
+count(): đếm số lần xuất hiện của 1 thành phần trong list  
+clear(): hàm xóa hết mọi ohaanf tử trong list                
+string  
+len(): độ dài xâu, chuỗi
+lower(): chuyển chuỗi in hoa về dạng in thường
+upper(): chuyển chuỗi về dạng inhoa       
+isalnum(): kiểm tra xem một xâu có chỉ chứa kí tự chữ và số hayk
+isalpha(): kiểm tra một chuỗi có chứa toàn kí tự chữ hay k
+isnumeric(): kkiểm tra xem một chuỗi có toàn kí tự số hay k
+split(): dùng để cắt một chuoix ra thành list các chuỗi
+join(): dùng để nối một tập hợp thành 1 chuỗi sử dụng kí tự cho trước
+replace(): dùng để thay thế các chuỗi con tìm thấy thành chuỗi con mới

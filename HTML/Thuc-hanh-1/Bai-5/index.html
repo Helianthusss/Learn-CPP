@@ -3,9 +3,23 @@
 <head>
 	<title>Mobilestore</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<!-- begin mainnav -->
+	<div id="mainnav">
+		<img id="logo" src="images/logo.png">
+		<div id="nav">
+		  <ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">STORE</a></li>
+			<li><a href="#" class="active">FEATURED</a></li>
+			<li><a href="#">BLOG</a></li>
+			<li><a href="#">CONTACT</a></li>
+		  </ul>
+		</div>
+	  </div>
 	<!-- end mainnav -->
 	<!-- begin center -->
 	<div class="content wrap">
@@ -41,7 +55,7 @@
               <textarea name="com" id="com" cols="30" rows="5"></textarea> <br>
               <label for="rate">Rating</label>
               <input type="text" name="rate" id="rate" size="5"> <br>
-              <input type="submit" value="send" name="submit" id="submit">
+              <input type="submit" value="send" name="submit" id="submit" onclick="return validate()">
             </form>	
 		</div>
 		<!-- end right slider bar -->

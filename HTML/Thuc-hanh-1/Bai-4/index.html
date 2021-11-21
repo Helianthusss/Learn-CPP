@@ -3,10 +3,27 @@
 <head>
 	<title>Mobilestore</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	
 	<!-- begin header -->
+	<div id="header">
+		<div id="search">
+			<input type="text" name="search" id="text-search">
+			<button value="Search" id="click">Search</button>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="#">Register</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Checkout</a></li>
+				<li><a href="#" class="active">Delivery</a></li>
+				<li><a href="#">MyAccount</a></li>
+				<li><a href="#"><span id="pink">shopping cart : </span>noitems</a></li>
+			</ul>
+		</div>
+	</div>
 	<!-- end header -->
 	
 	<!-- begin center -->
@@ -44,7 +61,7 @@
               <textarea name="com" id="com" cols="30" rows="5"></textarea> <br>
               <label for="rate">Rating</label>
               <input type="text" name="rate" id="rate" size="5"> <br>
-              <input type="submit" value="send" name="submit" id="submit">
+              <input type="submit" value="send" name="submit" id="submit" onclick="return validate()">
             </form>	
 
 		</div>

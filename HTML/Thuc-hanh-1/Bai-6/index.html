@@ -3,6 +3,7 @@
 <head>
 	<title>Mobilestore</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<!-- begin center -->
@@ -48,7 +49,16 @@
 		<!-- begin right slider bar -->
 		<div class="rightsider">
 			<!-- begin categories -->
-			
+			<h4>Categories</h4>
+			<div class="categories">
+				<form action="">
+					<input type="text" placeholder="Accord Mobiles">
+					<input type="text" placeholder="Ace Mobile">
+					<input type="text" placeholder="Acer Mobile">
+					<input type="text" placeholder="Airfone">
+					<input type="text" placeholder="Apple">	
+				</form>
+			</div>
 			<!-- end categories -->
 			<h4>Comment</h4>	
 			<form action="">
@@ -58,7 +68,7 @@
               <textarea name="com" id="com" cols="30" rows="5"></textarea> <br>
               <label for="rate">Rating</label>
               <input type="text" name="rate" id="rate" size="5"> <br>
-              <input type="submit" value="send" name="submit" id="submit">
+              <input type="submit" value="send" name="submit" id="submit" onclick="return validate()">
             </form>	
 		</div>
 		<!-- end right slider bar -->
