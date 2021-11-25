@@ -7,6 +7,12 @@
 #include<algorithm>
 using namespace std;
 
+// Họ tên: Trần Đức Anh
+// MSSV: 6151071034
+// Ngày sinh: 27/07/2002
+// Email: 6151071034@st.utc2.edu.vn
+// cài đạt các thuật toán sắp xếp đã học
+
 void BubbleSort(int a[], int n){
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-i-1;j++){
@@ -63,9 +69,7 @@ void merge(int a[], int left, int mid, int right){
 		L[i] = a[left + i];
 	for (int j = 0; j < n2; j++)
 		R[j] = a[mid + j + 1];
-	int i = 0;
-	int j = 0;
-	int k = left;
+	int i = 0,j=0,k=left;
 	while (i < n1 && j < n2)
 		a[k++] = (L[i] < R[j]) ? L[i++] : R[j++];
 	while (j < n2)
@@ -85,6 +89,12 @@ void mergeSort(int a[], int left, int right)
 		merge(a, left, mid, right);
 	}
 }
+// Họ tên: Trần Đức Anh
+// MSSV: 6151071034
+// Ngày sinh: 27/07/2002
+// Email: 6151071034@st.utc2.edu.vn
+// cài đạt các thuật toán tìm kiếm đã học
+
 int linearSearch(int a[], int n,int key){
     for(int i=0; i<n;i++){
         if(a[i]==key) return i;
@@ -101,11 +111,17 @@ int binarySearch(int a[], int n, int key){
     } 
     return -1;
 }
+// Họ tên: Trần Đức Anh
+// MSSV: 6151071034
+// Ngày sinh: 27/07/2002
+// Email: 6151071034@st.utc2.edu.vn
+// ham main       
+
 int main(){
     int a[5]={4,12,7,15,9};
-    // BubbleSort(a,5);
-    // SelectionSort(a,5);
-    // InsertionSort(a,5);
+    BubbleSort(a,5);
+    SelectionSort(a,5);
+    InsertionSort(a,5);
     QuickSort(a,0,4);
     mergeSort(a,0,4);
     cout<<"\nVi tri so can tim la: "<<linearSearch(a,5,7);
