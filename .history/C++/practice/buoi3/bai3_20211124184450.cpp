@@ -56,12 +56,7 @@ void swap (int &a, int &b){
         a = b;
         b = temp;
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// cài đạt các thuật toán tim kiem đã học
-
+// tim kiem node trong danh sach lien ket 
 Node *linearSearch(singleList list, int f){
 	Node *pTmp = list.pHead;
 	while (pTmp != NULL){
@@ -70,7 +65,6 @@ Node *linearSearch(singleList list, int f){
 	}
 	return pTmp;
 }
-
 Node* middle(Node* start, Node* last){
     if (start == NULL)	return NULL;
     Node* slow = start;
@@ -84,7 +78,6 @@ Node* middle(Node* start, Node* last){
     }
     return slow;
 }
-
 Node* binarySearch(singleList list, int value)
 {
     Node* start = list.pHead;
@@ -98,12 +91,7 @@ Node* binarySearch(singleList list, int value)
     } while (last == NULL || last != start);
     return NULL;
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// cài đạt các thuật toán sắp xếp đã học
-
+// sap xep trong danh sach lien ket
 void bubbleSort(singleList &list)
 {
     int swapped, i;
@@ -226,12 +214,6 @@ void FreeMemory(singleList &list){
 		pTmp = NULL;
 	}
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// ham main 
-
 int main(){
 	singleList list;
 	Initialize(list);

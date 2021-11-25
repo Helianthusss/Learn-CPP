@@ -73,7 +73,10 @@
     "memory_resource": "cpp",
     "optional": "cpp",
     "typeindex": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "future": "cpp",
+    "shared_mutex": "cpp",
+    "thread": "cpp"
   },
   "python.pythonPath": "C:\\Users\\ASIA\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
 }

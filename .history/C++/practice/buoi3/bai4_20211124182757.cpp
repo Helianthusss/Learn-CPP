@@ -8,12 +8,6 @@ using namespace std;
 struct Point{
     float x, y;
 };
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// nhap danh sach cac toa do 
-
 void enter(Point *a){
     cout<<"\nNhap hoanh do: ";cin>>a->x;
     cout<<"\nNhap tung do: ";cin>>a->y;
@@ -33,15 +27,9 @@ void printList(Point *a, int n){
     }
     cout<<endl;
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// sắp xếp các điểm tăng dần  theo khoảng cách từ gốc tọa độ đến điểm đó
-
 float length(Point *a){
     return sqrt(pow(a->x,2)+pow(a->y,2));
-} 
+}
 void swap(Point &a, Point &b){
     Point temp;
     temp = a;
@@ -67,12 +55,6 @@ void QuickSort(Point *a, int left, int right){
     if(right > i)
         QuickSort(a,i,right);
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// tìm các điểm nằm trong đường tròn tâm O bán kính R
-
 void find(Point *a, int n, int R){
     cout<<"Cac diem nam trong duong tron tam O ban kinh R: "<<endl;
     for(int i=0;i<n;i++){
@@ -80,12 +62,6 @@ void find(Point *a, int n, int R){
     }
     cout<<endl;
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// tìm các cắp điểm thỏa mãn 2 điểm nằm 2 phía bên trên trục hoành
-
 void findX(Point *a, int n){
     for(int i=0; i<n-1; i++){
         if(((a+i)->x>0 && (a+i)->y>0) || ((a+i)->x<0 && (a+i)->y>0)){
@@ -101,12 +77,6 @@ void findX(Point *a, int n){
         }
     }
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// tìm các điểm có khoảng cách  tới gốc tọa độ bằng d 
-
 void findD(Point *a, int n, int d){
     int count=0;
     for(int i=0;i<n;i++){
@@ -117,12 +87,6 @@ void findD(Point *a, int n, int d){
     }
     if(count==0) cout<<"khong tim thay diem nao bang "<<d<<endl;
 }
-// Họ tên: Trần Đức Anh
-// MSSV: 6151071034
-// Ngày sinh: 27/07/2002
-// Email: 6151071034@st.utc2.edu.vn
-// ham main 
-
 int main(){
     int n;
     cout<<"\nNhap so luong diem toa do: ";cin>>n;

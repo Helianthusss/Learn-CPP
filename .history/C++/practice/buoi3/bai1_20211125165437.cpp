@@ -11,7 +11,7 @@ using namespace std;
 // MSSV: 6151071034
 // Ngày sinh: 27/07/2002
 // Email: 6151071034@st.utc2.edu.vn
-// cài đạt các thuật toán tìm kiếm đã học
+// cài đạt các thuật toán sắp xếp đã học
 
 void BubbleSort(int a[], int n){
     for(int i=0;i<n-1;i++){
@@ -69,9 +69,7 @@ void merge(int a[], int left, int mid, int right){
 		L[i] = a[left + i];
 	for (int j = 0; j < n2; j++)
 		R[j] = a[mid + j + 1];
-	int i = 0;
-	int j = 0;
-	int k = left;
+	int i = 0,j=0,k=left;
 	while (i < n1 && j < n2)
 		a[k++] = (L[i] < R[j]) ? L[i++] : R[j++];
 	while (j < n2)
@@ -117,15 +115,10 @@ int binarySearch(int a[], int n, int key){
 // MSSV: 6151071034
 // Ngày sinh: 27/07/2002
 // Email: 6151071034@st.utc2.edu.vn
-// ham main 
+// ham main       
 
 int main(){
-    int *a = new int[5];
-    a[0]=4;
-    a[1]=12;
-    a[2]=7;
-    a[3]=15;
-    a[4]=9;
+    int a[5]={4,12,7,15,9};
     BubbleSort(a,5);
     SelectionSort(a,5);
     InsertionSort(a,5);
@@ -133,6 +126,5 @@ int main(){
     mergeSort(a,0,4);
     cout<<"\nVi tri so can tim la: "<<linearSearch(a,5,7);
     cout<<"\nVi tri so can tim la: "<<binarySearch(a,5,15);
-    delete[] a;
     return 0;
 }
