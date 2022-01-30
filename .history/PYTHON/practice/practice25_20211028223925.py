@@ -1,7 +1,0 @@
-[a,b]=int(input('nhap so nguyen a,b: '))
-print(a+b)
-print(a-b)
-print(a*b)
-print(a//b)  
-print(a%b)
-print(a**b)

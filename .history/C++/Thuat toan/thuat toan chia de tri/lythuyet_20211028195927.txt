@@ -1,9 +1,0 @@
-Thuật toán chia để trị (Devide and Conquer) dùng để giải lớp các bài toán có thể thực
-hiện được thông qua ba bước:
- Bước chia (Devide). Chia bài toán lớn thành những bài toán con có cùng kiểu với
-bài toán lớn.
-Bước trị (Conquer). Giải các bài toán con đã chia ở bước trước đó. Thông thường
-các bài toán con chỉ khác nhau về dữ liệu vào nên ta có thể thực hiện bằng một thủ
-tục đệ qui.
- Bước tổng hợp (Combine). Tổng hợp lại kết quả của các bài toán con để nhận
-được kết quả của bài toán lớn.

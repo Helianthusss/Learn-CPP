@@ -1,8 +1,0 @@
-a=int(input('nhap a: '))
-b=int(input('nhap b: '))
-print('Tong la: ', a+b)
-print('Hieu la: ',a-b)
-print('Tich la: ',a*b)
-print('Thuong la',a/b)  
-print('Chia lay du: ',a%b)
-print('A mu b',a**b)
