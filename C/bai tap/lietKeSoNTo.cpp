@@ -8,6 +8,7 @@ bool IsPrime(int n);
 int PrimeCount(int a[], int n);
 void PrintPrime(int a[], int n);
 
+// kieu du lieu tra ve  ten ham  ()
 int main()
 {
     int arr[MAX_SIZE];
@@ -34,7 +35,7 @@ void NhapMang(int arr[], int n)
         scanf("%d", &arr[i]);
     }
 }
- 
+
 void XuatMang(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -77,5 +78,3 @@ void PrintPrime(int a[], int n)
         }
     }
 }
-
- 

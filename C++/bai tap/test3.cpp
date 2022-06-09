@@ -1,13 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
-#include <conio.h>
 
-
-int main() {
-    system("cls");
-  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
-	int n;
+int main(){
+    int n;
     scanf("%d", &n);
     if(n < 2){
         printf("\n%d is not a prime number", n);
@@ -19,29 +14,16 @@ int main() {
             count++;
         }
     }
-    int octNumber = 0;
     if(count == 0){
-        int p = 0;        
+        int p = 0;
+        int octNumber = 0;
         while(n > 0){
             octNumber += (n % 8) * pow(10, p);
             p++;
             n /= 8;
-        };    
+        };
+        printf("%d", octNumber);
     }else{
         printf("\n%d is not a prime number", n);
     }
-  
-  
-  // Fixed Do not edit anything here.
-  printf("\nOUTPUT:\n");
-  
-  //@STUDENT: WRITE YOUR OUTPUT HERE:
-  printf("%d", octNumber);
-  
-  
-  
-  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
-  printf("\n");
-  system ("pause");
-  return(0);
 }

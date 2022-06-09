@@ -11,6 +11,7 @@ int main(){
  //   if(sd==0 ) cout <<k;
     if(n!=0) printf("%.0f",k-sd);
     else  printf("%.0f",sd);
+    system("pause");
     return 0;
 }
 
