@@ -8,73 +8,48 @@ bool IsPrime(int n);
 int PrimeCount(int a[], int n);
 void PrintPrime(int a[], int n);
 
-// kieu du lieu tra ve  ten ham  ()
 int main()
 {
     int arr[MAX_SIZE];
     int n; 
-    do
-    {
-        printf("Nhap n = ");
+    do{
         scanf("%d", &n);
     } while (n <= 0 || n > MAX_SIZE);
     NhapMang(arr, n);
-    XuatMang(arr, n);
-    int primeCount = PrimeCount(arr, n);
-    printf("\nSo luong so nguyen to la %d", primeCount);
-    if(primeCount > 0){
-        printf("\nDanh sach so nguyen to: ");
+    int printCount = PrimeCount(arr,n);
+    printf("OUTPUT:\n");
+    if(printCount > 0){
         PrintPrime(arr, n);
-    }
+    }else printf("no primes");
 } 
-void NhapMang(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        printf("Nhap arr[%d] = ", i);
+void NhapMang(int arr[], int n){
+    int i;
+    for (i = 0; i < n; i++){
         scanf("%d", &arr[i]);
     }
 }
 
-void XuatMang(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        printf("\narr[%d] = %d", i, arr[i]);
-    }
-}
-bool IsPrime(int n)
-{
-    if (n < 2)
-        return false;
-    for (int i = 2; i <= sqrt(n); i++)
-    {
-        if (n % i == 0)
-        {
-            return false;
-        }
+bool IsPrime(int n){
+    if (n < 2) return false;
+    int i;
+    for (i = 2; i <= sqrt(n); i++){
+        if (n % i == 0) return false;
     }
     return true;
 }
-int PrimeCount(int a[], int n)
-{
-    int count = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (IsPrime(a[i]))
-        {
-            count++;
-        }
+int PrimeCount(int a[], int n){
+    int count = 0,i;
+    for (i = 0; i < n; i++){
+        if (IsPrime(a[i])) count ++;
     }
     return count;
 } 
-void PrintPrime(int a[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        if (IsPrime(a[i]))
-        {
-            printf("%d\t", a[i]);
+void PrintPrime(int a[], int n){
+    int i;
+    for (i = 0; i < n; i++){
+        if (IsPrime(a[i])){
+            printf("%d", a[i]);
+            printf(" ");
         }
     }
 }
