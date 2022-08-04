@@ -23,3 +23,4 @@ int main(){
         printf("%d khong phai la so hoan hao.",n);
     return 0;
 }
+

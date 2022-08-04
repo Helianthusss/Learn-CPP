@@ -54,5 +54,4 @@ void rankStudent(SinhVien *sv){
 void outPutStudent(SinhVien *sv){
     printf("\nHo va ten sinh vien: %s",sv->hoten);
     printf("\nDiem trung binh: %.2f",sv->dtb);
-    
 }

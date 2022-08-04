@@ -44,6 +44,7 @@ bool kiemTraSoCP(int n){
 	}
 	return false;
 }
+a[i] = *(a+i)
 void lietKeSoCP(int *a, int n){
 	printf("\n Mang so chinh phuong la:");
 	for(int i=0; i<n;i++){
