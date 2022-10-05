@@ -2,15 +2,15 @@
 //MSSV: 6151071034
 #include<bits/stdc++.h>
 using namespace std;
-
+int pi=3.14;
 class Student{
     private:
        string name;
        float mathScore,literatureScore;
     public:
-        Student();
+       Student();
         Student(string name, float literatureScore, float mathScore );
-        Student(string name);
+        // Student(string name);
         Student(const Student &sv);
         ~Student();
         float mediumScore();
@@ -22,6 +22,13 @@ class Student{
         bool operator !=(Student sv);
         friend istream& operator >>(istream &is, Student &sv);
         friend ostream& operator <<(ostream& os, Student sv);
+
+        // Student(){
+        //     this->name = "";
+        //     this->mathScore = 0;
+        //     this->literatureScore = 0;
+        // }
+
 };
 istream& operator >>(istream &is, Student &sv){
     fflush(stdin);

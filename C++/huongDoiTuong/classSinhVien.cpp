@@ -19,6 +19,7 @@ class Student{
        void setLiteralPoint(float newiteralPoint);
        float mediumScore();
        void classification();
+       
 };
 void Student::nhap(){
     fflush(stdin);
