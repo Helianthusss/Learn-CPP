@@ -10,7 +10,7 @@ int main(){
     cin>>n;
     for(int i=0;i<n;++i){
         cin>>x;
-        if(s.insert(x).second) cout<<"0 ";
+        if (s.insert(x).second) cout<<"0 ";
         else cout<<"1 ";
     }
 }
